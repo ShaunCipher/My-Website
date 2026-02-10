@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>My Website</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background:white;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: #272727
+}
+
+.logo img {
+    width:50%;
+    max-width: 100px;
+    height: auto;
+    display: block;
+    float: left;
+}
+
+.nav-container {
+    border: 2px solid #ef1d26;  
+    border-radius: 40px;
+    padding: 6px 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.nav-item {
+    background: transparent;  
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;            
+    transition: 0.2s ease;
+}
+
+.nav-item:hover {
+    background: #ef1d2640; 
+}
+
+.nav-item:active {
+    background: #ef1d26;
+    color: white;
+}
+
+</style>
+
 </head>
+
 <body>
-    <h1>Hello, world!</h1>
-    <p>Website project in progress.</p>
+
+<div class="top-nav">
+
+    <!-- LOGO -->
+    <div class="logo">
+        <img src="images\logo\logo_white.png">
+    </div>
+
+    <!-- NAV CONTAINER -->
+    <div class="nav-container">
+        <button class="nav-item">HOME</button>
+        <button class="nav-item">About</button>
+        <button class="nav-item">Contact</button>
+    </div>
+
+</div>
+
 </body>
 </html>
