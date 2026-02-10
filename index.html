@@ -63,6 +63,61 @@ body {
     display:block;
 }
 
+.about-me-wrapper {
+    margin:40px;
+}
+
+.about-me {
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    align-items:flex-start;
+}
+
+.about-me-left {
+    flex: 0 0 35%;
+    max-width:350px
+}
+
+.about-me-left img {
+    width:100%;
+    height: auto;
+    display:block;
+    border-radius: 10px;
+}
+
+.about-me-right {
+    flex: 1;
+    min-width: 250px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+}
+
+.note-block {
+    border-radius: 12px;
+    padding: 15px;
+    background: #474747;
+    margin: 40px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    color:white    
+}
+
+.bold {font-weight:bold}
+.italic {font-style:italic}
+.red {color: #ef1d26}
+
+.bold-italic {font-weight:bold; font-style:italic}
+.red-bold {font-weight: bold; color: #ef1d26}
+.red-italic {font-style:italic; color: #ef1d26}
+.red-bold-italic {color: #ef1d26; font-weight:bold; font-style:italic}
+
+hr {
+    height: 1px;
+    background-color:#272727;
+    margin: 40px;
+}
+
 </style>
 
 </head>
@@ -86,6 +141,27 @@ body {
 </div>
 
 <img src="images\banners\top_banner.jpg" class="banner">
+
+<div class='about-me-wrapper'>
+    <div class="about-me">
+        <div class="about-me-left">
+            <img src="images\my_pictures\about-me-img.jpg">
+        </div>
+
+        <div class="about-me-right">
+            <h1><span class='red'> Hi, I'm Charlene</span>, and it's a pleasure to meet you!</h1>
+            <p>I am currently pursuing a <span class="bold">BS Computer Science</span> degree majoring in <span class="bold">Data Science</span>. I am a <span class="bold">Dean’s Lister</span> and <span class="bold">DOST-SEI Scholar</span> with a strong foundation in data analysis and advanced Microsoft Excel.</p>
+            <p>I have hands-on experience working with large datasets, creating accurate reports, and supporting data-driven decision- making through academic projects and organizational work. I continuously develop my skills through certifications and online learning and am eager to grow and contribute in data- and technology-focused environments.</p>
+            <p class="bold-italic">Open to internships, part-time, and project-based roles. </p>    
+        </div>
+    </div>
+</div>
+
+<div class="note-block">
+    <p>I created this website for my Prelims exam in websystem technology and its similar to my existing Notion website. I will update this in the future so that it will be my main portfolio website.</p>
+</div>
+
+<hr>
 
 </body>
 </html>
