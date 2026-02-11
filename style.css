@@ -130,10 +130,12 @@ hr {
     display: flex;
     gap: 20px;
     justify-content: center;
+    padding: 0 10%
 }
 
 .card {
-    flex: 1;
+    /* flex: 1;*/
+    width: 60%;
     color: white;
     background: #474747;
     padding: 20px;
@@ -164,7 +166,7 @@ hr {
 }
 
 .card-gif {
-    width: 75%;          
+    width: 70%;          
     height: auto;          
     border-radius: 8px;    
     margin-bottom: 15px;   
