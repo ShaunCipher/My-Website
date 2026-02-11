@@ -130,7 +130,6 @@ hr {
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin-top: 20px;
 }
 
 .card {
@@ -164,20 +163,34 @@ hr {
     text-decoration: none;
 }
 
+.card-gif {
+    width: 75%;          
+    height: auto;          
+    border-radius: 8px;    
+    margin-bottom: 15px;   
+    display: block;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;       
+}
+
+.card:hover .card-gif {
+    transform: scale(1.02);
+    transition: 0.3s ease;
+}
+
+
 @media (max-width: 768px) {
-    /* Stack the cards vertically */
     .card-container {
         flex-direction: column;
         gap: 15px;
     }
 
-    /* Ensure cards take up full width on mobile */
     .card {
         width: 100%;
-        box-sizing: border-box; /* Prevents padding from breaking the width */
+        box-sizing: border-box; 
     }
 
-    /* Adjust the about-me section for mobile if it isn't already */
     .about-me {
         flex-direction: column;
         align-items: center;
