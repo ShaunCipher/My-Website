@@ -3,127 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My Website</title>
-
-<style>
-
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background:white;
-}
-
-.top-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-    background: #272727
-}
-
-.logo img {
-    width:50%;
-    max-width: 100px;
-    height: auto;
-    display: block;
-    float: left;
-}
-
-.nav-container {
-    border: 2px solid #ef1d26;  
-    border-radius: 40px;
-    padding: 6px 10px;
-    display: flex;
-    gap: 8px;
-}
-
-.nav-item {
-    background: transparent;  
-    border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 14px;
-    color: white;            
-    transition: 0.2s ease;
-}
-
-.nav-item:hover {
-    background: #ef1d2640; 
-}
-
-.nav-item:active {
-    background: #ef1d26;
-    color: white;
-}
-
-.banner {
-    width:100%;
-    height:auto;
-    display:block;
-}
-
-.about-me-wrapper {
-    margin:40px;
-}
-
-.about-me {
-    display:flex;
-    flex-wrap:wrap;
-    gap:30px;
-    align-items:flex-start;
-}
-
-.about-me-left {
-    flex: 0 0 35%;
-    max-width:350px
-}
-
-.about-me-left img {
-    width:100%;
-    height: auto;
-    display:block;
-    border-radius: 10px;
-}
-
-.about-me-right {
-    flex: 1;
-    min-width: 250px;
-    font-family: 'Montserrat', sans-serif;
-    text-align: justify;
-}
-
-.note-block {
-    border-radius: 12px;
-    padding: 15px;
-    background: #474747;
-    margin: 40px;
-    font-family: 'Montserrat', sans-serif;
-    text-align: justify;
-    color:white    
-}
-
-.bold {font-weight:bold}
-.italic {font-style:italic}
-.red {color: #ef1d26}
-
-.bold-italic {font-weight:bold; font-style:italic}
-.red-bold {font-weight: bold; color: #ef1d26}
-.red-italic {font-style:italic; color: #ef1d26}
-.red-bold-italic {color: #ef1d26; font-weight:bold; font-style:italic}
-
-.center {
-    text-align:center;
-}
-
-hr {
-    height: 1px;
-    background-color:#272727;
-    margin: 40px;
-}
-
-</style>
-
+    <title>Charlene Jusgado | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -146,13 +27,13 @@ hr {
 
 <img src="images\banners\top_banner.jpg" class="banner">
 
-<div class='about-me-wrapper'>
-    <div class="about-me">
-        <div class="about-me-left">
+<div class='section-wrapper'>
+    <div class="section">
+        <div class="section-left">
             <img src="images\my_pictures\about-me-img.jpg">
         </div>
 
-        <div class="about-me-right">
+        <div class="section-right">
             <h1><span class='red'> Hi, I'm Charlene</span>, and it's a pleasure to meet you!</h1>
             <p>I am currently pursuing a <span class="bold">BS Computer Science</span> degree majoring in <span class="bold">Data Science</span>. I am a <span class="bold">Dean’s Lister</span> and <span class="bold">DOST-SEI Scholar</span> with a strong foundation in data analysis and advanced Microsoft Excel.</p>
             <p>I have hands-on experience working with large datasets, creating accurate reports, and supporting data-driven decision- making through academic projects and organizational work. I continuously develop my skills through certifications and online learning and am eager to grow and contribute in data- and technology-focused environments.</p>
@@ -165,7 +46,23 @@ hr {
     <p>I created this website for my Prelims exam in websystem technology and its similar to my existing Notion website. I will update this in the future so that it will be my main portfolio website.</p>
 </div>
 
-<hr>
+<div class="explore-section">
+    <h1 class="center"><span class=red>Explore</span> My Work</h1>
+    <div class="card-container">
+        <a href="projects.html" class="card">
+            <h3>Projects</h3>
+            <p>Data analysis, visualizations, and coding work.</p>
+        </a>
+        <a href="achievements.html" class="card">
+            <h3>Achievements</h3>
+            <p>Championships, certifications, and awards.</p>
+        </a>
+        <a href="contact.html" class="card">
+            <h3>Contact</h3>
+            <p>Let's connect and work together!</p>
+        </a>
+    </div>
+</div>
 
 <footer>
     <div class="center">

@@ -1,0 +1,190 @@
+body {
+    
+    display: flex; 
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background:white;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: #272727
+}
+
+.logo img {
+    width:50%;
+    max-width: 100px;
+    height: auto;
+    display: block;
+    float: left;
+}
+
+.nav-container {
+    border: 2px solid #ef1d26;  
+    border-radius: 40px;
+    padding: 6px 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.nav-item {
+    background: transparent;  
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;            
+    transition: 0.2s ease;
+}
+
+.nav-item:hover {
+    background: #ef1d2640; 
+}
+
+.nav-item:active {
+    background: #ef1d26;
+    color: white;
+}
+
+.banner {
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.section-wrapper {
+    margin:40px 20px;
+}
+
+.section {
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    align-items:flex-start;
+}
+
+.section-left {
+    flex: 0 0 35%;
+    max-width:350px
+}
+
+.section-left img {
+    width:100%;
+    height: auto;
+    display:block;
+    border-radius: 10px;
+}
+
+.section-right {
+    flex: 1;
+    min-width: 250px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+}
+
+.note-block {
+    border-radius: 12px;
+    padding: 15px;
+    background: #474747;
+    margin: 40px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    color:white    
+}
+
+.bold {font-weight:bold}
+.italic {font-style:italic}
+.red {color: #ef1d26}
+
+.bold-italic {font-weight:bold; font-style:italic}
+.red-bold {font-weight: bold; color: #ef1d26}
+.red-italic {font-style:italic; color: #ef1d26}
+.red-bold-italic {color: #ef1d26; font-weight:bold; font-style:italic}
+
+.center {
+    text-align:center;
+}
+
+hr {
+    height: 1px;
+    background-color:#272727;
+    margin: 40px;
+}
+
+.explore-section {
+    margin: 40px 20px;
+    padding: 20px 0;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1;
+    color: white;
+    background: #474747;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #272727; 
+    transition: 0.3s;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: block
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: #818289; 
+    color: white
+}
+
+.card h3 {
+    margin-top: 0;
+    color: white;
+}
+
+.card p {
+    margin-top: 0;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    /* Stack the cards vertically */
+    .card-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Ensure cards take up full width on mobile */
+    .card {
+        width: 100%;
+        box-sizing: border-box; /* Prevents padding from breaking the width */
+    }
+
+    /* Adjust the about-me section for mobile if it isn't already */
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me-left {
+        max-width: 100%;
+        flex: 0 0 auto;
+    }
+}
