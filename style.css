@@ -1,125 +1,168 @@
+/* =========================
+   GLOBAL
+========================= */
+
 body {
-    
     display: flex; 
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background:white;
+    background: white;
+}
+
+a {
+    text-decoration: none;
 }
 
 .footer {
     margin-top: auto;
 }
 
+/* =========================
+   NAVIGATION
+========================= */
+
 .top-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
-    background: #272727
+    padding: 15px 40px;
+    position: relative;
+    background: #272727; /* Important so dropdown blends */
 }
 
 .logo img {
-    width:50%;
+    width: 50%;
     max-width: 100px;
     height: auto;
     display: block;
-    float: left;
 }
 
+/* Desktop Nav */
 .nav-container {
-    border: 2px solid #ef1d26;  
-    border-radius: 40px;
-    padding: 6px 10px;
     display: flex;
-    gap: 8px;
+    gap: 30px;
 }
 
 .nav-item {
-    background: transparent;  
-    border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 14px;
-    color: white;            
-    transition: 0.2s ease;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
 .nav-item:hover {
-    background: #ef1d2640; 
+    color: #ef1d26;
 }
 
-.nav-item:active {
-    background: #ef1d26;
-    color: white;
+/* Burger */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
 }
+
+.burger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.3s ease;
+}
+
+/* Burger Animation */
+.burger.toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* =========================
+   BANNER
+========================= */
 
 .banner {
-    width:100%;
-    height:auto;
-    display:block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
+/* =========================
+   MAIN SECTION
+========================= */
+
 .section-wrapper {
-    margin:40px 20px 0px 20px;
+    margin: 40px 20px 0px 20px;
 }
 
 .section {
-    display:flex;
-    flex-wrap:wrap;
-    gap:30px;
-    align-items:flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
 }
 
 .section-left {
     flex: 0 0 35%;
-    max-width:350px
+    max-width: 350px;
 }
 
 .section-left img {
-    width:100%;
+    width: 100%;
     height: auto;
-    display:block;
+    display: block;
     border-radius: 10px;
 }
 
 .section-right {
     flex: 1;
     min-width: 250px;
-    font-family: 'Montserrat', sans-serif;
     text-align: justify;
 }
+
+/* =========================
+   NOTE BLOCK
+========================= */
 
 .note-block {
     border-radius: 12px;
     padding: 15px;
     background: #474747;
     margin: 20px 0 0 0;
-    font-family: 'Montserrat', sans-serif;
     text-align: justify;
-    color:white    
+    color: white;
 }
 
-.bold {font-weight:bold}
-.italic {font-style:italic}
-.red {color: #ef1d26}
+/* =========================
+   TEXT UTILITIES
+========================= */
 
-.bold-italic {font-weight:bold; font-style:italic}
-.red-bold {font-weight: bold; color: #ef1d26}
-.red-italic {font-style:italic; color: #ef1d26}
-.red-bold-italic {color: #ef1d26; font-weight:bold; font-style:italic}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.red { color: #ef1d26; }
 
-.center {
-    text-align:center;
-}
+.bold-italic { font-weight: bold; font-style: italic; }
+.red-bold { font-weight: bold; color: #ef1d26; }
+.red-italic { font-style: italic; color: #ef1d26; }
+.red-bold-italic { color: #ef1d26; font-weight: bold; font-style: italic; }
+
+.center { text-align: center; }
 
 hr {
     height: 1px;
-    background-color:#272727;
+    background-color: #272727;
     margin: 40px;
 }
+
+/* =========================
+   EXPLORE SECTION
+========================= */
 
 .explore-section {
     margin-bottom: 20px;
@@ -130,28 +173,24 @@ hr {
     display: flex;
     gap: 20px;
     justify-content: center;
-    padding: 0 10%
+    padding: 0 10%;
 }
 
 .card {
-    /* flex: 1;*/
     width: 60%;
-    color: white;
     background: #474747;
     padding: 20px;
     border-radius: 12px;
     border-left: 5px solid #272727; 
     transition: 0.3s;
     text-align: center;
-    text-decoration: none;
     color: white;
-    display: block
+    display: block;
 }
 
 .card:hover {
     transform: translateY(-5px);
     background: #818289; 
-    color: white
 }
 
 .card h3 {
@@ -162,18 +201,14 @@ hr {
 .card p {
     margin-top: 0;
     color: white;
-    text-decoration: none;
 }
 
 .card-gif {
     width: 70%;          
     height: auto;          
     border-radius: 8px;    
-    margin-bottom: 15px;   
+    margin: 15px auto;   
     display: block;
-    margin-bottom: 15px;
-    margin-left: auto;
-    margin-right: auto;       
 }
 
 .card:hover .card-gif {
@@ -181,8 +216,36 @@ hr {
     transition: 0.3s ease;
 }
 
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
 
 @media (max-width: 768px) {
+
+    /* NAVIGATION */
+
+    .burger {
+        display: flex;
+    }
+
+    .nav-container {
+        position: absolute;
+        top: 70px;
+        right: 15px;
+        background: #272727;
+        flex-direction: column;
+        width: 220px;
+        padding: 20px;
+        gap: 20px;
+        border-radius: 10px;
+        display: none;
+    }
+
+    .nav-container.active {
+        display: flex;
+    }
+
+    /* SECTION STACKING */
 
     .section {
         flex-direction: column;
@@ -201,6 +264,8 @@ hr {
         text-align: justify;    
     }
 
+    /* CARDS */
+
     .explore-section {
         margin: 20px 10px;    
     }
@@ -212,10 +277,10 @@ hr {
     }
 
     .card {
-        width: 70%;          
+        width: 80%;          
         box-sizing: border-box;
         padding: 15px;
-        margin: 0 auto     
+        margin: 0 auto;
     }
     
     .card-gif {

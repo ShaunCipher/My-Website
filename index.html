@@ -12,19 +12,28 @@
 
 <div class="top-nav">
 
-    <!-- LOGO -->
     <div class="logo">
-        <img src="images\logo\logo_white.png">
+        <img src="images/logo/logo_white.png" alt="Logo">
     </div>
 
-    <!-- NAV CONTAINER -->
-    <div class="nav-container">
-        <button class="nav-item">HOME</button>
-        <button class="nav-item">About</button>
-        <button class="nav-item">Contact</button>
+    <!-- Burger Button -->
+    <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
+
+    <!-- Navigation Links -->
+    <nav class="nav-container" id="navMenu">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="work.html" class="nav-item">Work</a>
+        <a href="credentials.html" class="nav-item">Credentials</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+    </nav>
 
 </div>
+
 
 <img src="images\banners\top_banner.jpg" class="banner">
 
@@ -47,25 +56,37 @@
 </div>
 
 <div class="explore-section">
-    <h1 class="center"><span class=red>Explore</span> My Work</h1>
+    <h1 class="center">Explore My <span class="red">Portfolio</span></h1>
     <div class="card-container">
-        <a href="projects.html" class="card">
-            <h3>Projects</h3>
-            <img src="images\Cards\project.gif" class="card-gif">
-            <p>Data analysis, visualizations, and coding work.</p>
+
+        <a href="about.html" class="card">
+            <h3>About Me</h3>
+            <img src="images/Cards/me.gif" class="card-gif">
+            <p>Learn more about my journey, skills, and passion for data analysis and technology.</p>
         </a>
-        <a href="achievements.html" class="card">
-            <h3>Achievements</h3>
-            <img src="images\Cards\achievement.gif" class="card-gif">
-            <p>Championships, certifications, and awards.</p>
+
+        <a href="work.html" class="card">
+            <h3>Projects & Work</h3>
+            <img src="images/Cards/project.gif" class="card-gif">
+            <p>Data analysis projects, academic systems, and real-world problem-solving work.</p>
         </a>
+
+        <a href="credentials.html" class="card">
+            <h3>Achievements & Certifications</h3>
+            <img src="images/Cards/achievement.gif" class="card-gif">
+            <p>Scholarships, recognitions, and professional certifications that reflect my growth.</p>
+        </a>
+
         <a href="contact.html" class="card">
-            <h3>Contact</h3>
-            <img src="images\Cards\contact.gif" class="card-gif">
-            <p>Let's connect and work together!</p>
+            <h3>Let’s Connect</h3>
+            <img src="images/Cards/contact.gif" class="card-gif">
+            <p>Interested in collaborating? Reach out for internships, projects, or opportunities.</p>
         </a>
+
     </div>
 </div>
+
+
 
 <footer>
     <div class="center">
@@ -74,6 +95,24 @@
     </div>
     <img src="images\banners\footer.png" class="banner">
 </footer>
+
+<script>
+const burger = document.getElementById("burger");
+const navMenu = document.getElementById("navMenu");
+
+burger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    burger.classList.toggle("toggle");
+});
+
+document.querySelectorAll(".nav-item").forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        burger.classList.remove("toggle");
+    });
+});
+</script>
+
 
 </body>
 </html>
