@@ -4,93 +4,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title | Charlene Jusgado</title>
+    <title>Contact | Charlene Jusgado</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* =========================
+           Contact Page Styles
+        ========================== */
+
+        .content-wrapper {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-info {
+            flex: 1 1 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-info h1 {
+            color: #ef1d26;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Links black by default, red on hover */
+        .contact-item a {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #ef1d26;
+        }
+
+        .contact-image {
+            flex: 1 1 350px;
+            max-width: 400px;
+            position: relative;
+        }
+
+        .contact-image img {
+            width: 100%;
+            border-radius: 12px;
+            display: block;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-image img.hover-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        .contact-image:hover img.hover-img {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column-reverse;
+                gap: 30px;
+            }
+
+            .contact-info,
+            .contact-image {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- =========================
-     TOP NAVIGATION
-========================= -->
-<div class="top-nav">
+    <!-- =========================
+         TOP NAVIGATION
+    ========================== -->
+    <div class="top-nav">
+        <div class="logo">
+            <img src="images/logo/logo_white.png" alt="Logo">
+        </div>
 
-    <div class="logo">
-        <img src="images/logo/logo_white.png" alt="Logo">
+        <!-- Burger Button -->
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-container" id="navMenu">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="about.html" class="nav-item">About</a>
+            <a href="work.html" class="nav-item">Work</a>
+            <a href="credentials.html" class="nav-item">Credentials</a>
+            <a href="contact.html" class="nav-item">Contact</a>
+        </nav>
     </div>
 
-    <!-- Burger Button -->
-    <div class="burger" id="burger">
-        <span></span>
-        <span></span>
-        <span></span>
+    <!-- =========================
+         TOP BANNER
+    ========================== -->
+    <img src="images/banners/top_banner.jpg" class="banner" alt="Banner Image">
+
+    <!-- =========================
+         CONTACT CONTENT
+    ========================== -->
+    <div class="content-wrapper">
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <h1>Wanna work together?</h1>
+            <div class="contact-item">📌 Email: <a href="mailto:jusgadocharlene@gmail.com">jusgadocharlene@gmail.com</a></div>
+            <div class="contact-item">📌 LinkedIn: <a href="https://www.linkedin.com/in/jusgadocharlene/" target="_blank">LinkedIn Profile</a></div>
+            <div class="contact-item">📌 GitHub: <a href="https://github.com/ShaunCipher" target="_blank">GitHub Profile</a></div>
+            <div class="contact-item">📌 Phone: (+63) 9608499498</div>
+            <div class="contact-item">📌 Facebook: <a href="https://www.facebook.com/jusgadocharlene/" target="_blank">Facebook Profile</a></div>
+        </div>
+
+        <!-- Contact Image -->
+        <div class="contact-image">
+            <img src="images/my_pictures/noir_img.png" alt="Charlene" class="idle-img">
+            <img src="images/my_pictures/red_noir.png" alt="Charlene Red" class="hover-img">
+        </div>
+
     </div>
 
-    <!-- Navigation Links -->
-    <nav class="nav-container" id="navMenu">
-        <a href="index.html" class="nav-item">Home</a>
-        <a href="about.html" class="nav-item">About</a>
-        <a href="work.html" class="nav-item">Work</a>
-        <a href="credentials.html" class="nav-item">Credentials</a>
-        <a href="contact.html" class="nav-item">Contact</a>
-    </nav>
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer>
+        <div class="center">
+            <h1>Charlene <span class="red">Jusgado</span></h1>
+            <p>Aspiring Data Analyst | <span class="red">Data Science Student</span> | Python • <span class="red">SQL</span> • Data Visualization | <span class="red">DOST-SEI Scholar</span></p>
+        </div>
+        <img src="images/banners/footer.png" class="banner" alt="Footer Banner">
+    </footer>
 
-</div>
+    <!-- =========================
+         SCRIPTS
+    ========================== -->
+    <script>
+        const burger = document.getElementById("burger");
+        const navMenu = document.getElementById("navMenu");
 
-<!-- =========================
-     TOP BANNER
-========================= -->
-<img src="images/banners/top_banner.jpg" class="banner" alt="Banner Image">
+        // Toggle nav open/close when clicking the burger
+        burger.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+            burger.classList.toggle("toggle");
+        });
 
+        // Close nav when clicking a nav link
+        document.querySelectorAll(".nav-item").forEach(link => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove("active");
+                burger.classList.remove("toggle");
+            });
+        });
 
-
-<!-- =========================
-     FOOTER
-========================= -->
-<footer>
-    <div class="center">
-        <h1>Charlene <span class="red">Jusgado</span></h1>
-        <p>Aspiring Data Analyst | <span class="red">Data Science Student</span> | Python • <span class="red">SQL</span> • Data Visualization | <span class="red">DOST-SEI Scholar</span></p>
-    </div>
-    <img src="images/banners/footer.png" class="banner" alt="Footer Banner">
-</footer>
-
-<!-- =========================
-     BURGER MENU SCRIPT
-========================= -->
-<script>
-const burger = document.getElementById("burger");
-const navMenu = document.getElementById("navMenu");
-
-// Toggle nav open/close when clicking the burger
-burger.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-    burger.classList.toggle("toggle");
-});
-
-// Close nav when clicking a nav link
-document.querySelectorAll(".nav-item").forEach(link => {
-    link.addEventListener("click", () => {
-        navMenu.classList.remove("active");
-        burger.classList.remove("toggle");
-    });
-});
-
-// Optional: Close nav when clicking outside the menu
-document.addEventListener("click", (e) => {
-    if (!navMenu.contains(e.target) && !burger.contains(e.target)) {
-        navMenu.classList.remove("active");
-        burger.classList.remove("toggle");
-    }
-});
-
-// Flip profile image every 5 seconds
-const flipCard = document.querySelector(".flip-card");
-setInterval(() => {
-    flipCard.style.transform = flipCard.style.transform === "rotateY(180deg)" ? "rotateY(0deg)" : "rotateY(180deg)";
-}, 5000);
-</script>
-
+        // Optional: Close nav when clicking outside the menu
+        document.addEventListener("click", (e) => {
+            if (!navMenu.contains(e.target) && !burger.contains(e.target)) {
+                navMenu.classList.remove("active");
+                burger.classList.remove("toggle");
+            }
+        });
+    </script>
 
 </body>
 </html>

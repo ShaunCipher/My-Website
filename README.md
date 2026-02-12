@@ -41,12 +41,14 @@ Charlene Jusgado
 - Personal Projects 
 - Academic Projects 
 
+
 # Credentials 
 - Certifications 
 - - Certification image
 - - Certification detail 
 - Achievements 
 - - Awards 
+- Status: Complete
 
 # Contact 
 - Email 
