@@ -100,18 +100,35 @@
 const burger = document.getElementById("burger");
 const navMenu = document.getElementById("navMenu");
 
+// Toggle nav open/close when clicking the burger
 burger.addEventListener("click", () => {
     navMenu.classList.toggle("active");
     burger.classList.toggle("toggle");
 });
 
+// Close nav when clicking a nav link
 document.querySelectorAll(".nav-item").forEach(link => {
     link.addEventListener("click", () => {
         navMenu.classList.remove("active");
         burger.classList.remove("toggle");
     });
 });
+
+// Optional: Close nav when clicking outside the menu
+document.addEventListener("click", (e) => {
+    if (!navMenu.contains(e.target) && !burger.contains(e.target)) {
+        navMenu.classList.remove("active");
+        burger.classList.remove("toggle");
+    }
+});
+
+// Flip profile image every 5 seconds
+const flipCard = document.querySelector(".flip-card");
+setInterval(() => {
+    flipCard.style.transform = flipCard.style.transform === "rotateY(180deg)" ? "rotateY(0deg)" : "rotateY(180deg)";
+}, 5000);
 </script>
+
 
 
 </body>

@@ -29,6 +29,7 @@ Charlene Jusgado
 - - Exeperience timeline
 - - - Organization 
 - - - Freelance work 
+- Status: Complete
 
 # Portfolio 
 - Client work 
