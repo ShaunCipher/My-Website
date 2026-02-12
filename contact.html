@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title | Charlene Jusgado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================
+     TOP NAVIGATION
+========================= -->
+<div class="top-nav">
+
+    <div class="logo">
+        <img src="images/logo/logo_white.png" alt="Logo">
+    </div>
+
+    <!-- Burger Button -->
+    <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="nav-container" id="navMenu">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="work.html" class="nav-item">Work</a>
+        <a href="credentials.html" class="nav-item">Credentials</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+    </nav>
+
+</div>
+
+<!-- =========================
+     TOP BANNER
+========================= -->
+<img src="images/banners/top_banner.jpg" class="banner" alt="Banner Image">
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer>
+    <div class="center">
+        <h1>Charlene <span class="red">Jusgado</span></h1>
+        <p>Aspiring Data Analyst | <span class="red">Data Science Student</span> | Python • <span class="red">SQL</span> • Data Visualization | <span class="red">DOST-SEI Scholar</span></p>
+    </div>
+    <img src="images/banners/footer.png" class="banner" alt="Footer Banner">
+</footer>
+
+<!-- =========================
+     BURGER MENU SCRIPT
+========================= -->
+<script>
+const burger = document.getElementById("burger");
+const navMenu = document.getElementById("navMenu");
+
+burger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    burger.classList.toggle("toggle");
+});
+
+document.querySelectorAll(".nav-item").forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        burger.classList.remove("toggle");
+    });
+});
+</script>
+
+</body>
+</html>

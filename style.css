@@ -55,7 +55,6 @@ a {
     color: #ef1d26;
 }
 
-/* Burger */
 .burger {
     display: none;
     flex-direction: column;
@@ -70,7 +69,6 @@ a {
     transition: 0.3s ease;
 }
 
-/* Burger Animation */
 .burger.toggle span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -83,19 +81,11 @@ a {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* =========================
-   BANNER
-========================= */
-
 .banner {
     width: 100%;
     height: auto;
     display: block;
 }
-
-/* =========================
-   MAIN SECTION
-========================= */
 
 .section-wrapper {
     margin: 40px 20px 0px 20px;
@@ -126,10 +116,6 @@ a {
     text-align: justify;
 }
 
-/* =========================
-   NOTE BLOCK
-========================= */
-
 .note-block {
     border-radius: 12px;
     padding: 15px;
@@ -138,10 +124,6 @@ a {
     text-align: justify;
     color: white;
 }
-
-/* =========================
-   TEXT UTILITIES
-========================= */
 
 .bold { font-weight: bold; }
 .italic { font-style: italic; }
@@ -159,10 +141,6 @@ hr {
     background-color: #272727;
     margin: 40px;
 }
-
-/* =========================
-   EXPLORE SECTION
-========================= */
 
 .explore-section {
     margin-bottom: 20px;

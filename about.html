@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Charlene Jusgado</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* =========================
+           Additional About Page Styles
+        ========================== */
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Container wrapper for horizontal margin */
+        .content-wrapper {
+            padding: 0 20px; /* horizontal margin */
+            max-width: 1200px; /* optional: limits very wide screens */
+            margin: 0 auto;
+        }
+
+        .flip-container {
+            perspective: 1000px;
+            width: 250px;
+            margin: 0 auto 20px auto;
+        }
+
+        .flip-card {
+            width: 100%;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .flip-card img {
+            width: 100%;
+            border-radius: 12px;
+            backface-visibility: hidden;
+        }
+
+        .flip-card .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotateY(180deg);
+        }
+
+        /* Resume section */
+        .resume-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .resume-section h2 {
+            color: #ef1d26;
+            margin-bottom: 15px;
+        }
+
+        .resume-preview {
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            margin: 0 auto 15px auto;
+            border-radius: 12px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ef1d26;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #c70f1a;
+        }
+
+        /* Skills section */
+        .skills-section,
+        .experience-section {
+            margin: 40px 0;
+        }
+
+        .skills-section h2,
+        .experience-section h2 {
+            color: #ef1d26;
+            margin-bottom: 15px;
+        }
+
+        .skills-list,
+        .tools-list,
+        .softskills-list {
+            list-style: disc;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Experience timeline */
+        .timeline-item {
+            margin-bottom: 20px;
+        }
+
+        .timeline-item h3 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .timeline-item span {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* See more work button */
+        .portfolio-btn {
+            display: block;
+            text-align: center;
+            margin: 30px auto;
+            padding: 12px 25px;
+            background: #ef1d26;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s;
+            max-width: 250px;
+        }
+
+        .portfolio-btn:hover {
+            background: #c70f1a;
+        }
+
+        /* About details headings */
+        .red-bold {
+            color: #ef1d26;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     TOP NAVIGATION
+========================= -->
+<div class="top-nav">
+    <div class="logo">
+        <img src="images/logo/logo_white.png" alt="Logo">
+    </div>
+
+    <!-- Burger Button -->
+    <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="nav-container" id="navMenu">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="work.html" class="nav-item">Work</a>
+        <a href="credentials.html" class="nav-item">Credentials</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+    </nav>
+</div>
+
+<!-- =========================
+     TOP BANNER
+========================= -->
+<img src="images/banners/top_banner.jpg" class="banner" alt="Banner Image">
+
+<!-- =========================
+     ABOUT CONTENT
+========================= -->
+<div class="content-wrapper">
+    <div class="section-wrapper">
+        <div class="section">
+
+            <!-- Left Profile Image -->
+            <div class="section-left">
+                <div class="flip-container" id="flipProfile">
+                    <div class="flip-card">
+                        <img src="images/my_pictures/prof.png" alt="Profile Front">
+                        <img src="images/my_pictures/alias.png" alt="Profile Back" class="back">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="section-right">
+                <h1><span class="red">About Me</span></h1>
+
+                <div class="about-details">
+                    <h3 class="bold">Personal Philosophy</h3>
+                    <p>"When you want something, all the universe conspires in helping you to achieve it." - Paulo Coelho (The Alchemist)</p>
+                    <p>I strongly believe that determination and persistence can turn even the most ambitious dreams into reality. Every challenge is an opportunity to learn, grow, and move closer to my goals, and I approach every project with curiosity, passion, and commitment.</p>
+
+                    <h3 class="bold">Career Goal</h3>
+                    <p>My ultimate ambition is to excel as a professional analyst while building the foundation to become a future attorney. I aim to combine analytical problem-solving, data-driven insights, and ethical decision-making to make meaningful contributions in both technology and legal contexts.</p>
+                    <p>I am motivated by opportunities that allow me to solve complex problems, help organizations make smarter decisions, and advocate for fairness and justice in all endeavors.</p>
+
+                    <h3 class="bold">Education</h3>
+                    <p>I am currently pursuing a <span class="bold">BS Computer Science</span> degree majoring in <span class="bold">Data Science</span> at the University of Perpetual Help System Laguna. Through my coursework, I have developed strong skills in data analysis, visualization, and reporting, while also learning the importance of critical thinking and ethical considerations in handling information.</p>
+                    <p>My education is not just about mastering technical skills—it’s about understanding how technology can be used to solve real-world problems and make a positive impact on society.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================
+         RESUME SECTION
+    ========================== -->
+    <div class="resume-section">
+        <h2>Resume</h2>
+        <img src="files/OJT Posting.png" alt="Resume Preview" class="resume-preview">
+        <a href="files/JusgadoResume.pdf" download class="download-btn">Download My Resume</a>
+    </div>
+
+    <!-- =========================
+         SKILLS SECTION
+    ========================== -->
+    <div class="skills-section">
+        <h2>Skills</h2>
+
+        <h3>Technical Skills</h3>
+        <ul class="skills-list">
+            <li>Microsoft Excel (Advanced)</li>
+            <li>Python</li>
+            <li>Data Analysis</li>
+            <li>Data Reporting</li>
+            <li>Data Visualization</li>
+        </ul>
+
+        <h3>Tools & Software</h3>
+        <ul class="tools-list">
+            <li>Microsoft Excel, Word, PowerPoint</li>
+            <li>Google Docs, Google Sheets, Google Drive</li>
+        </ul>
+
+        <h3>Soft Skills</h3>
+        <ul class="softskills-list">
+            <li>Client Relations</li>
+            <li>Networking</li>
+            <li>Team Collaboration</li>
+            <li>Research & Analytics</li>
+            <li>Problem-Solving</li>
+        </ul>
+    </div>
+
+    <!-- =========================
+         EXPERIENCE / ACTIVITIES TIMELINE
+    ========================== -->
+    <div class="experience-section">
+        <h2>Activities & Engagements</h2>
+
+        <div class="timeline-item">
+            <h3>CSSC Logistics Committee</h3>
+            <span>Member | Biñan, Laguna | 2024-2025</span>
+            <ul>
+                <li>Organize and manage events, ensuring all necessary materials and equipment are present and delivered on time.</li>
+                <li>Handle delivery of documents for signatures and maintain communication with teachers, faculty, staff, and committee.</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <h3>ROTC Office Personnel</h3>
+            <span>Office Personnel | Biñan, Laguna | 2024-2025</span>
+            <ul>
+                <li>Handles and organizes files of students and officers.</li>
+                <li>Creates documents, spreadsheets, and PowerPoint presentations.</li>
+                <li>Part-time IT technician.</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <h3>CSSC Documentation Committee</h3>
+            <span>Member | 2025-2026</span>
+            <ul>
+                <li>Collaborates with the documentation committee to review, update, and organize key documents.</li>
+                <li>Photograph events and report the collected data.</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Junior Philippine Computer Society - UPHSL</h3>
+            <span>Auditor | 2025-2026</span>
+            <ul>
+                <li>Review financial records, ensuring accuracy and compliance.</li>
+                <li>Create financial reports and analyze findings.</li>
+                <li>Contribute ideas on events and strategies.</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Ramshackle Shop</h3>
+            <span>Co-Founder & Client Relations Lead | 2025-2026</span>
+            <ul>
+                <li>Identifies potential clients and partners.</li>
+                <li>Delivers persuasive sales presentations.</li>
+                <li>Collaborates with the team to develop strategies and expand customer base.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- =========================
+         SEE MORE WORK BUTTON
+    ========================== -->
+    <a href="work.html" class="portfolio-btn">See More of My Work</a>
+
+</div> <!-- end content-wrapper -->
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer>
+    <div class="center">
+        <h1>Charlene <span class="red">Jusgado</span></h1>
+        <p>Aspiring Data Analyst | <span class="red">Data Science Student</span> | Python • <span class="red">SQL</span> • Data Visualization | <span class="red">DOST-SEI Scholar</span></p>
+    </div>
+    <img src="images/banners/footer.png" class="banner" alt="Footer Banner">
+</footer>
+
+<!-- =========================
+     BURGER MENU SCRIPT
+========================= -->
+<script>
+const burger = document.getElementById("burger");
+const navMenu = document.getElementById("navMenu");
+
+burger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    burger.classList.toggle("toggle");
+});
+
+document.querySelectorAll(".nav-item").forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        burger.classList.remove("toggle");
+    });
+});
+
+// Flip profile image every 5 seconds
+const flipCard = document.querySelector(".flip-card");
+setInterval(() => {
+    flipCard.style.transform = flipCard.style.transform === "rotateY(180deg)" ? "rotateY(0deg)" : "rotateY(180deg)";
+}, 5000);
+</script>
+
+</body>
+</html>
