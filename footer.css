@@ -1,0 +1,24 @@
+/* ============================================================
+   FOOTER STYLES
+   ============================================================ */
+
+footer {
+    margin-top: auto; /* Pushes footer to bottom if content is short */
+    background: #272727;
+    color: white;
+    padding: 40px 0 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Optional: if you have social icons in your footer */
+.footer-links {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

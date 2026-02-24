@@ -1,0 +1,80 @@
+/* ============================================================
+   GLOBAL RESET & BASE STYLES
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex; 
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    color: #272727;
+    line-height: 1.6;
+    overflow-x: hidden; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================================================
+   UTILITY CLASSES (The Python "Helper Functions" of CSS)
+   ============================================================ */
+
+.red { color: #ef1d26; }
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.bold-italic { font-weight: bold; font-style: italic; }
+.center { text-align: center; }
+
+.content-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-wrapper {
+    margin: 40px 0;
+}
+
+/* =========================
+   TYPOGRAPHY CONSTANTS
+   ========================= */
+
+h1 {
+    font-size: 2.5rem; 
+    font-weight: 800;  
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.1rem; 
+    margin-bottom: 15px;
+}

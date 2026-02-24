@@ -1,0 +1,46 @@
+/* ============================================================
+   SECTION STRUCTURE & ALIGNMENT
+   ============================================================ */
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-left {
+    flex: 0 0 35%;
+    max-width: 350px;
+}
+
+
+.section-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.section-right h1{
+    text-align: left;
+}
+
+.section-right p{
+    text-align: justify;
+}
+
+.content-wrapper {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.note-block {
+    border-radius: 12px;
+    padding: 15px;
+    background: #474747;
+    margin: 20px 0 0 0;
+    text-align: justify;
+    color: white;
+}
