@@ -1,4 +1,6 @@
-### My-Website
+# My-Website
+
+Open in browser: https://shauncipher.github.io/My-Website/
 
 ## Project Overview
 Personal website developed as a school project and continuously improved over time. Includes documented design and development process.
