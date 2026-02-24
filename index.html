@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,35 +10,31 @@
 <body>
 
 <div class="top-nav">
-
     <div class="logo">
         <img src="images/logo/logo_white.png" alt="Logo">
     </div>
 
-    <!-- Burger Button -->
     <div class="burger" id="burger">
         <span></span>
         <span></span>
         <span></span>
     </div>
 
-    <!-- Navigation Links -->
     <nav class="nav-container" id="navMenu">
         <a href="index.html" class="nav-item">Home</a>
         <a href="about.html" class="nav-item">About</a>
+        <a href="work.html" class="nav-item">Work</a>
         <a href="credentials.html" class="nav-item">Credentials</a>
         <a href="contact.html" class="nav-item">Contact</a>
     </nav>
-
 </div>
 
-
-<img src="images\banners\top_banner.jpg" class="banner">
+<img src="images/banners/top_banner.jpg" class="banner">
 
 <div class='section-wrapper'>
     <div class="section">
         <div class="section-left">
-            <img src="images\my_pictures\about-me-img.jpg">
+            <img src="images/my_pictures/about-me-img.jpg">
         </div>
 
         <div class="section-right">
@@ -85,50 +80,15 @@
     </div>
 </div>
 
-
-
 <footer>
     <div class="center">
         <h1>Charlene <span class='red'>Jusgado</span></h1>
         <p>Aspiring Data Analyst | <span class="red">Data Science Student</span> | Python • <span class='red'>SQL</span> • Data Visualization | <span class="red">DOST-SEI Scholar</span></p>
     </div>
-    <img src="images\banners\footer.png" class="banner">
+    <img src="images/banners/footer.png" class="banner">
 </footer>
 
-<script>
-const burger = document.getElementById("burger");
-const navMenu = document.getElementById("navMenu");
-
-// Toggle nav open/close when clicking the burger
-burger.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-    burger.classList.toggle("toggle");
-});
-
-// Close nav when clicking a nav link
-document.querySelectorAll(".nav-item").forEach(link => {
-    link.addEventListener("click", () => {
-        navMenu.classList.remove("active");
-        burger.classList.remove("toggle");
-    });
-});
-
-// Optional: Close nav when clicking outside the menu
-document.addEventListener("click", (e) => {
-    if (!navMenu.contains(e.target) && !burger.contains(e.target)) {
-        navMenu.classList.remove("active");
-        burger.classList.remove("toggle");
-    }
-});
-
-// Flip profile image every 5 seconds
-const flipCard = document.querySelector(".flip-card");
-setInterval(() => {
-    flipCard.style.transform = flipCard.style.transform === "rotateY(180deg)" ? "rotateY(0deg)" : "rotateY(180deg)";
-}, 5000);
-</script>
-
-
+<script src="script.js" defer></script>
 
 </body>
 </html>
